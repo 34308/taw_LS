@@ -78,6 +78,12 @@ const dataEndpoint = (router) => {
     router.get('/api/post/:id', async (request, response, next) => {
         response.status(200).send(posts.find(post=> post.id.toString()===request.params.id));
     });
+    router.put('/api/post/:id', async (request, response, next) => {
+        var post= posts.find(post=> post.id.toString()===request.params.id);
+        post.text=request.body.text;
+        post.image=request.body.image;
+        response.status(200).send(posts.find(post=> post.id.toString()===request.params.id));
+    });
 };
 
 
