@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import config from './config';
 import cors from 'cors';
 import express from 'express';
+
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 import routes from './REST/routes';
