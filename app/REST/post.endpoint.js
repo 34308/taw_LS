@@ -1,6 +1,7 @@
 import business from '../business/business.container';
 
 const postEndpoint = (router) => {
+
     router.get('/api/posts', async (request, response, next) => {
         try {
             let result = await business.getPostManager().query();
